@@ -1,0 +1,7 @@
+
+
+baseURL = /api/v{version}/
+
+
+
+

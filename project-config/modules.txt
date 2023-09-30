@@ -32,26 +32,13 @@ npm install husky -D
 #PRETTIER - ESLINT
 npm install prettier eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-prettier eslint-plugin-prettier -D
 
-// .eslintrc.js
-module.exports = {
-  parser: '@typescript-eslint/parser',
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-  ],
-  plugins: ['@typescript-eslint', 'prettier'],
-  rules: {
-    'prettier/prettier': 'error',
-  },
-};
 
 
-// .prettierrc.js
-module.exports = {
-  semi: true,
-  trailingComma: 'all',
-  singleQuote: true,
-  printWidth: 100,
-  tabWidth: 2,
-};
+
+
+npm i express dotenv mysql2 sequelize cors jwt uuid
+
+npm i @types/express @types/dotenv @types/mysql2 @types/sequelize @types/cors @types/jwt @types/morgan morgan ts-node -D
+
+
+

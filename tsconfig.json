@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "target": "ES2016",                             
-    "module": "commonjs",                               
-    "strict": true,                                      
-    "esModuleInterop": true,                       
-    "forceConsistentCasingInFileNames": true,           
-    "skipLibCheck": true,                                                                           
-    // "outDir": "./",                                  
+    "target": "ES2016",
+    "module": "commonJS",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    // "outDir": "./",
   },
   "include": [
     "./src/**.ts"
