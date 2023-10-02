@@ -31,4 +31,4 @@ const sequelize = new Sequelize(
   }
 );
 
-export const enviroments = [sequelize, sequelize_dev, sequelize_dev_work];
+export const environments = [sequelize, sequelize_dev, sequelize_dev_work];

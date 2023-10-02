@@ -36,7 +36,7 @@ npm install prettier eslint @typescript-eslint/parser @typescript-eslint/eslint-
 
 
 
-npm i express dotenv mysql2 sequelize cors jwt uuid
+npm i express dotenv mysql2 sequelize cors jsonwebtoken express-jwt uuid bcryptjs
 
 npm i @types/express @types/dotenv @types/mysql2 @types/sequelize @types/cors @types/jwt @types/morgan morgan ts-node -D
 
