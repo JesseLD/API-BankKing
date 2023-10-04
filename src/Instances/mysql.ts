@@ -19,6 +19,7 @@ const sequelize_dev = new Sequelize(
   {
     dialect: "mysql",
     port: parseInt(process.env.MYSQL_PORT_DEV as string),
+    host: "db4free.net",
   }
 );
 const sequelize = new Sequelize(

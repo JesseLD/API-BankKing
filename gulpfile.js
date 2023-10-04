@@ -1,16 +1,27 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+/* eslint-disable @typescript-eslint/no-var-requires */
 const gulp = require("gulp");
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { exec } = require("child_process");
+const clean = require("gulp-clean");
+const ts = require("gulp-typescript");
 
-gulp.task("run-tests", (callback) => {
-  exec("npx jest", (error, stdout, stderr) => {
-    console.log(stdout);
-    console.error(stderr);
-    if (error) {
-      console.error("Erro ao executar os testes:", error);
-      process.exit(1);
-    }
-    callback();
-  });
+const tsProject = ts.createProject("tsconfig.json");
+
+// Clean the build directory
+gulp.task("clean", () => {
+  return gulp.src("dist/*", { read: false, allowEmpty: true }).pipe(clean());
+});
+
+// Compile TypeScript files
+gulp.task("scripts", () => {
+  return tsProject.src().pipe(tsProject()).pipe(gulp.dest("dist"));
+});
+
+// Define a build task that depends on the other tasks
+gulp.task("build", gulp.series("clean", "scripts"));
+
+// Default task: Build the project
+gulp.task("default", gulp.series("build"));
+
+// Watch for changes and automatically rebuild
+gulp.task("watch", () => {
+  gulp.watch("src/**/*.ts", gulp.series("scripts"));
 });

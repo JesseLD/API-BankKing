@@ -1,7 +1,7 @@
 import { Router } from "express";
-import userController from "../Controller/user.controller";
-import { validateSignin, validateSignup } from "../Auth/validations";
 import auth from "../Auth/auth";
+import { validateSignin, validateSignup } from "../Auth/validations";
+import userController from "../Controller/user.controller";
 
 export const userRoutes = Router();
 
